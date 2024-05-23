@@ -1,0 +1,13 @@
+def find_mean_deviation_variance(numbers):
+mean = sum(numbers) / len(numbers)
+    variance = sum((x - mean) ** 2 for x in numbers) / len(numbers)
+    deviation = variance ** 0.5
+    print("Mean: {:.2f}".format(mean))
+    print("Deviation: {:.2f}".format(deviation))
+    print("Variance: {:.2f}".format(variance))
+n = int(input("Enter the number of elements: "))
+numbers = [0] * n
+print("Enter the elements:")
+for i in range(n):
+    numbers[i] = float(input())
+find_mean_deviation_variance(numbers)
