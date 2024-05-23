@@ -1,0 +1,11 @@
+def sort_array(numbers):
+    numbers.sort()
+    print("Array sorted in ascending order =", end=" ")
+    for number in numbers:
+        print(number, end=" ")
+n = int(input("Enter how many values you want to read: "))
+numbers = [0] * n
+print("Enter the values of a[{}]:".format(range(n)))
+for i in range(n):
+    numbers[i] = int(input())
+sort_array(numbers)
