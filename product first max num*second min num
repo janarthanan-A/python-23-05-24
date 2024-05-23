@@ -1,0 +1,33 @@
+def find_max_min_product(arr1, arr2):
+    max_element = max(arr1)
+
+    min_element = min(arr2)
+
+    product = max_element * min_element
+
+    return product
+
+n, m = map(int, input("Enter size of first and second arrays: ").split())
+
+if n < 0 or n > 100000 or m < 0 or m > 100000:
+    print("Invalid array sizes")
+    return
+
+print("Enter first array elements:")
+arr1 = list(map(int, input().split()))
+
+if len(arr1) != n:
+    print("Invalid first array")
+    return
+
+print("Enter second array elements:")
+arr2 = list(map(int, input().split()))
+
+if len(arr2) != m:
+    print("Invalid second array")
+    return
+
+product = find_max_min_product(arr1, arr2)
+
+print("Max element in first array is", max(arr1), "and min element in second array is", min(arr2))
+print("The product of these two is", product)
