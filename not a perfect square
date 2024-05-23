@@ -1,0 +1,26 @@
+import math
+
+def find_largest_not_perfect_square(arr):
+    largest_not_perfect_square = -1
+    for num in arr:
+        if not math.isqrt(num)**2 == num:
+            if num > largest_not_perfect_square:
+                largest_not_perfect_square = num
+
+    return largest_not_perfect_square
+n = int(input("Enter array size: "))
+arr = [0] * n
+if n < 0 or n > 100000:
+    print("Invalid input")
+    return
+
+print("Enter {} array elements:".format(n))
+for i in range(n):
+    arr[i] = int(input())
+
+largest_not_perfect_square = find_largest_not_perfect_square(arr)
+
+if largest_not_perfect_square == -1:
+    print("There is no number that is not a perfect square")
+else:
+    print("Largest number that is not a perfect square: ", largest_not_perfect_square)
