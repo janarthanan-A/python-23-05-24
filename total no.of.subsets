@@ -1,0 +1,18 @@
+def count_subsets(arr):
+    total_subsets = 2**len(arr)
+
+    return total_subsets
+n = int(input("Enter array size: "))
+arr = [0] * n
+
+if n < 0 or n > 100000:
+    print("Invalid input")
+    return
+
+print("Enter {} array elements:".format(n))
+for i in range(n):
+    arr[i] = int(input())
+
+total_subsets = count_subsets(arr)
+
+print("Total number of subsets: ", total_subsets)
