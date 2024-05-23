@@ -1,0 +1,31 @@
+def find_repetitive_element(arr):
+    count = {}
+    for num in arr:
+        if num in count:
+            count[num] += 1
+        else:
+            count[num] = 1
+
+    for num, freq in count.items():
+        if freq > 1:
+            return num
+
+    return -1
+
+n = int(input("Enter array size: "))
+arr = [0] * n
+
+if n < 1 or n > 100000:
+    print("Invalid input")
+    return
+
+print("Enter {} array elements:".format(n))
+for i in range(n):
+    arr[i] = int(input())
+
+repetitive_element = find_repetitive_element(arr)
+
+if repetitive_element == -1:
+    print("Array elements are not repeated")
+else:
+    print("The repetitive element: ", repetitive_element)
