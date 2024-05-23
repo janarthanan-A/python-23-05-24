@@ -1,0 +1,20 @@
+def insert_and_delete(numbers, n, pos, num):
+    numbers.insert(pos, num)
+    print("Updated array:")
+    for i in range(n+1):
+        print(numbers[i], end=" ")
+    del numbers[pos]
+    print("\nUpdated array after deletion:")
+    for i in range(n):
+        print(numbers[i], end=" ")
+n = int(input("Enter the number of elements: "))
+numbers = [0] * n
+print("Enter the elements:")
+for i in range(n):
+    numbers[i] = int(input())
+print("Original array:")
+for i in range(n):
+    print(numbers[i], end=" ")
+pos = int(input("\nEnter the position to insert: "))
+num = int(input("Enter the number to insert: "))
+insert_and_delete(numbers, n, pos, num)
