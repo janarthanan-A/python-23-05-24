@@ -1,0 +1,15 @@
+def remove_duplicates(numbers):
+    unique_numbers = set()
+    for number in numbers:
+        if number not in unique_numbers:
+            unique_numbers.add(number)
+    unique_numbers = list(unique_numbers)
+    print("The unique elements found in the array are:")
+    for number in unique_numbers:
+        print(number)
+n = int(input("Enter the array size: "))
+numbers = [0] * n
+print("Input {} elements in an array:".format(n))
+for i in range(n):
+    numbers[i] = int(input())
+remove_duplicates(numbers)
