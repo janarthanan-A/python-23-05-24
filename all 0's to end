@@ -1,0 +1,9 @@
+def move_zeros_to_end(arr):
+    zero_pointer = 0
+    non_zero_pointer = 0
+
+    while non_zero_pointer < len(arr):
+        if arr[non_zero_pointer] != 0:
+            arr[zero_pointer], arr[non_zero_pointer] = arr[non_zero_pointer], arr[zero_pointer]
+            zero_pointer += 1
+            non_zero_pointer += 
